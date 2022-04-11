@@ -2,6 +2,8 @@ import "./App.css";
 import React from "react";
 import Home from "./components/Home";
 import Quiz from "./components/Quiz";
+import topBackground from "./images/top-blob.png";
+import bottomBackground from "./images/bottom-blob.png";
 
 export default function App() {
 	const [start, setStart] = React.useState(false);
@@ -93,8 +95,8 @@ export default function App() {
 
 	return (
 		<main>
-			<img src="./images/top-Blob" className="background-top" alt="" />
-			<img src="./images/bottom-Blob" className="background-bottom" alt="" />
+			<img src={topBackground} className="background-top" alt="" />
+			<img src={bottomBackground} className="background-bottom" alt="" />
 			{!start ? (
 				<Home
 					startQuiz={startQuiz}
